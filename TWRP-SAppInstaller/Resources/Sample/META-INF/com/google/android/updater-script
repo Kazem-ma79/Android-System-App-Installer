@@ -1,0 +1,43 @@
+ui_print("*****************************************");
+ui_print("*       System APP Install/Update       *");
+ui_print("*                                       *");
+ui_print("*         Kazem_ma79.Github.io          *");
+ui_print("*           Version: 20200128           *");
+ui_print("*****************************************");
+ui_print("");
+ui_print("*****************************************");
+ui_print("************* Package Apps **************");
+{{PKG_APPS}}
+ui_print("* Please wipe dalvik after installation *");
+ui_print("*****************************************");
+ui_print("");
+
+package_extract_dir("install", "/tmp/install");
+set_metadata_recursive("/tmp/install", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644);
+set_metadata_recursive("/tmp/install/bin", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0755);
+run_program("/tmp/install/bin/configure.sh");
+
+show_progress(1.000000, 0);
+ui_print("Mounting FileSystems...");
+ifelse(is_mounted("/system"), "", mount("ext4", "EMMC", file_getprop("/tmp/config", "system"), "/system"));
+set_progress(0.100000);
+
+ui_print("Preparing to install...");
+set_progress(0.300000);
+
+ui_print("Installing Apps...");
+run_program("/tmp/install/bin/installer.sh");
+set_progress(0.500000);
+
+ui_print("Setting permissions...");
+set_progress(0.700000);
+
+# Unmounting filesystems...
+ifelse(is_mounted("/system"), unmount("/system"));
+set_progress(0.800000);
+
+ui_print("*****************************************");
+ui_print("*         Installation Complete!        *");
+ui_print("*****************************************");
+set_progress(0.900000);
+set_progress(1.000000);

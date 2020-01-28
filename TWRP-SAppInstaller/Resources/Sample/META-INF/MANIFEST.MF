@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (JRummy Apps Inc.)
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: 0uzvZmxIvxEBoc8PmtL51tQZd4Q=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: ygSP0NefcGv5SErY1AZLNH7HpZM=
+
+Name: system/priv-app/MiuiCamera/MiuiCamera.apk
+SHA1-Digest: PV7UgQtQRIr1ZoM/wfX+vcHfT9g=
+
