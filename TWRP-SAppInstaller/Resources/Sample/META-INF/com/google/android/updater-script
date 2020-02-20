@@ -2,7 +2,7 @@ ui_print("*****************************************");
 ui_print("*       System APP Install/Update       *");
 ui_print("*                                       *");
 ui_print("*         Kazem_ma79.Github.io          *");
-ui_print("*           Version: 20200213           *");
+ui_print("*           Version: 20200220           *");
 ui_print("*****************************************");
 ui_print("");
 ui_print("*****************************************");
