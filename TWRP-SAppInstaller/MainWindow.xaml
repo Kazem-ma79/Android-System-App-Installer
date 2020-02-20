@@ -61,7 +61,7 @@
         <Image x:Name="TWRPLogo" Source="Resources/teamwin-recovery-project-twrp-logo.jpg" HorizontalAlignment="Stretch" Margin="10,225,457,12" VerticalAlignment="Stretch"/>
         <Grid VerticalAlignment="Bottom" Margin="10,0,457,10" Height="20">
             <ProgressBar x:Name="progressValue" Minimum="0" />
-            <TextBlock x:Name="progressText" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock x:Name="progressText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Ready!" />
         </Grid>
     </Grid>
 </Controls:MetroWindow>
